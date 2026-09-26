@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --color-paper: #f2f4ef;
+  --color-paper-raised: #ffffff;
+  --color-ink: #1e2420;
+  --color-ink-soft: #4c554e;
+  --color-border: #d9ded4;
+  --color-brand: #2f5d4a;
+  --color-brand-dark: #1f3f32;
+  --color-positive: #3c8361;
+  --color-positive-bg: #e4f1e9;
+  --color-negative: #a6445b;
+  --color-negative-bg: #f5e6ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.page-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.page-eyebrow {
+  color: var(--color-ink-soft);
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.page-title {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  color: var(--color-ink-soft);
+  font-size: 15px;
+  max-width: 56ch;
+  margin: 0 0 32px;
+  line-height: 1.55;
+}
+
+.auth-card {
+  max-width: 380px;
+  margin: 64px auto;
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 36px 32px;
+}
+
+.result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.result-badge--positive {
+  background: var(--color-positive-bg);
+  color: var(--color-positive);
+}
+
+.result-badge--negative {
+  background: var(--color-negative-bg);
+  color: var(--color-negative);
+}
