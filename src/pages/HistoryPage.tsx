@@ -7,7 +7,7 @@ const columns: TableColumnsType<HistoryEntry> = [
   {
     title: "Комментарий",
     dataIndex: "text",
-    key: "text",
+    ///key: "text",
     render: (text: string) => (
       <Typography.Text style={{ maxWidth: 420 }} ellipsis={{ tooltip: text }}>
         {text}
@@ -17,7 +17,7 @@ const columns: TableColumnsType<HistoryEntry> = [
   {
     title: "Результат",
     dataIndex: "label",
-    key: "label",
+    ///key: "label",
     width: 170,
     render: (label: HistoryEntry["label"]) =>
       label === "positive" ? (
