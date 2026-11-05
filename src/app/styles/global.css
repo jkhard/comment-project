@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --color-paper: #f2f4ef;
+  --color-paper-raised: #ffffff;
+  --color-ink: #1e2420;
+  --color-ink-soft: #4c554e;
+  --color-border: #d9ded4;
+  --color-brand: #2f5d4a;
+  --color-brand-dark: #1f3f32;
+  --color-positive: #3c8361;
+  --color-positive-bg: #e4f1e9;
+  --color-negative: #a6445b;
+  --color-negative-bg: #f5e6ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.sider-title {
+  color: #fff;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 20px 20px 16px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 24px;
+}
+
+.page-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.page-eyebrow {
+  color: var(--color-ink-soft);
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.page-title {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  color: var(--color-ink-soft);
+  font-size: 15px;
+  max-width: 56ch;
+  margin: 0 0 32px;
+  line-height: 1.55;
+}
+
+.auth-card {
+  max-width: 380px;
+  margin: 64px auto;
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 36px 32px;
+}
+
+.result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.result-badge--positive {
+  background: var(--color-positive-bg);
+  color: var(--color-positive);
+}
+
+.result-badge--negative {
+  background: var(--color-negative-bg);
+  color: var(--color-negative);
+}
+
+.result-section {
+  margin-top: 40px;
+}
+
+.result-card__badge {
+  margin: 8px 0 12px;
+}
+
+.result-card__link {
+  margin-top: 12px;
+  color: var(--color-ink-soft);
+  font-size: 14px;
+}
+
+.example-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: -8px 0 20px;
+  color: var(--color-ink-soft);
+  font-size: 14px;
+}
+
+.state-view {
+  padding: 24px 0;
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-card {
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 16px 20px;
+  animation: fade-up 0.35s ease-out both;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.2s ease;
+}
+
+.history-card:hover {
+  box-shadow: 0 2px 10px rgba(30, 36, 32, 0.08);
+}
+
+.history-card--removing {
+  opacity: 0;
+  transform: translateX(24px);
+}
+
+.history-card__text {
+  margin: 0 0 12px;
+  line-height: 1.55;
+}
+
+.history-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  font-size: 13px;
+  color: var(--color-ink-soft);
+}
+
+.history-card__meta .ant-btn {
+  margin-left: auto;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in {
+  animation: fade-up 0.35s ease-out both;
+}
+
+.page-transition {
+  animation: fade-up 0.3s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 24px 16px 48px;
+  }
+}
+
+@media (max-width: 440px) {
+  .auth-card {
+    margin: 24px 16px;
+    padding: 28px 20px;
+  }
+}
