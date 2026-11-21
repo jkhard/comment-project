@@ -30,11 +30,11 @@ def get_classification_requests(
 
 
 def create_classification_request(
-    db: Session, request_in: ClassificationRequestCreate
+    db: Session, user_id: int, request_in: ClassificationRequestCreate
 ) -> ClassificationRequest:
     label, confidence = classify_text(request_in.text)
     db_request = ClassificationRequest(
-        user_id=request_in.user_id,
+        user_id=user_id,
         text=request_in.text,
         label=label,
         confidence=confidence,

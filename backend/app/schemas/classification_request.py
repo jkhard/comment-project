@@ -7,7 +7,6 @@ SentimentLabel = Literal["positive", "negative"]
 
 
 class ClassificationRequestCreate(BaseModel):
-    user_id: int
     text: str = Field(min_length=1, max_length=1000)
 
 
